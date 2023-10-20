@@ -36,8 +36,8 @@ class Student(Osoba):
 #peto = Student("Peter", "Tatarka", 2005, "3.AG")
 #peto.pozdrav()
 
-pocet_studentov = 4
-pocet_ucitelov = 3
+pocet_studentov = 20
+pocet_ucitelov = 4
 
 studenti = list()
 ucitelia = list()
@@ -97,3 +97,22 @@ for i in range(pocet_ucitelov):
     print(i, ucitelia[i].meno, ucitelia[i].priezvisko, ucitelia[i].vek, ucitelia[i].rok, ucitelia[i].titul,ucitelia[i].predmet, ucitelia[i].trieda)
 print("\n")
 ucitelia[1].pozdrav()
+
+id = int(input("Zadaj cislo ucitela: "))
+
+uc = ucitelia[id]
+uc.pozdrav()
+
+
+for i in range(pocet_studentov):
+    if uc.trieda == studenti[i].trieda:
+        print(i, studenti[i].meno, studenti[i].priezvisko, studenti[i].trieda, studenti[i].rok)
+id2 = int(input("Zadaj id studenta: "))
+
+st = studenti[id2-1]
+st.pozdrav()
+
+
+
+# sorted_ls = sorted(priezviska, reverse=False)
+# print(sorted_ls, mena) /triedenie mena podla priezviska abeceda
